@@ -1,3 +1,4 @@
+import { gamersService } from "../services/GamersService.js";
 
 // NOTE this is a definition for the object, or a blueprint
 export class GamersController {
@@ -8,7 +9,8 @@ export class GamersController {
   }
 
   increaseScore() {
-    console.log('Increasing score');
+    console.log('Increasing score from the controller');
+    gamersService.increaseScore()
   }
 
 }
