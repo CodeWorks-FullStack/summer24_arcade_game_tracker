@@ -8,7 +8,7 @@ export class GamersController {
   constructor() {
     console.log("GamersController Loaded");
     console.log("Constructors are cool");
-    // similar to calling function at the bottom of you js sheet
+    // similar to calling a function at the bottom of your js sheet
     this.drawGamers()
   }
 
