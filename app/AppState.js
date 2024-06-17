@@ -1,3 +1,4 @@
+import { Gamer } from './models/Gamer.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -9,18 +10,21 @@ class ObservableAppState extends EventEmitter {
   examples = []
 
   gamers = [
-    {
-      name: 'jeremy',
-      score: 0
-    },
-    {
-      name: 'mick',
-      score: 0
-    },
-    {
-      name: 'jake',
-      score: 0
-    },
+    // {
+    //   name: 'jeremy',
+    //   score: 0
+    // },
+    // {
+    //   name: 'mick',
+    //   score: 0
+    // },
+    // {
+    //   name: 'jake',
+    //   score: 0
+    // },
+    new Gamer('jeremy'),
+    new Gamer('mick'),
+    new Gamer('jake'),
   ]
 }
 
