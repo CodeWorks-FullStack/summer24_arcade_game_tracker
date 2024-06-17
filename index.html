@@ -51,6 +51,17 @@
         </div>
       </div>
 
+      <div class="row my-3">
+        <div class="col-12">
+          <!-- onsumbit goes on form element, submit type button will trigger this function -->
+          <form onsubmit="app.GamersController.createNewGamer()">
+            <label for="gamerName">Enter you Name</label>
+            <input id="gamerName" type="text" name="gamerName" required minlength="1" maxlength="200">
+            <button class="btn btn-outline-dark" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
       <div id="gamerCards" class="row">
         <!-- NOTE drawn dynamically by controller on page load -->
         <!-- <div class="col-4">

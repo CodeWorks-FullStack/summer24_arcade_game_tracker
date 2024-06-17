@@ -19,6 +19,21 @@ export class GamersController {
     this.drawGamers()
   }
 
+  createNewGamer() {
+    // NOTE do not refresh the page
+    event.preventDefault()
+    console.log('creating gamer!');
+    const form = event.target
+    console.log('got the form', form);
+    // @ts-ignore
+    const nameFromForm = form.gamerName.value
+    console.log('name from form: ' + nameFromForm);
+
+    gamersService.createNewGamer(nameFromForm)
+
+    this.drawGamers()
+  }
+
   drawGamers() {
     const gamerCardsElement = document.getElementById('gamerCards')
     let innerHTMLString = ''
