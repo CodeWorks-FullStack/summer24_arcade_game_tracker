@@ -7,6 +7,17 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {import('./models/Example.js').Example[]} */
   examples = []
+
+  gamers = [
+    {
+      name: 'jeremy',
+      score: 0
+    },
+    {
+      name: 'mick',
+      score: 0
+    },
+  ]
 }
 
 // NOTE export makes this AppState variable available to other javascript files (modules)
