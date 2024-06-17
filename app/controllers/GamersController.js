@@ -32,6 +32,9 @@ export class GamersController {
     gamersService.createNewGamer(nameFromForm)
 
     this.drawGamers()
+
+    // @ts-ignore
+    form.reset()
   }
 
   drawGamers() {
