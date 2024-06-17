@@ -6,4 +6,12 @@ export class GamersController {
     console.log("GamersController Loaded");
     console.log("Constructors are cool");
   }
+
+  increaseScore() {
+    console.log('Increasing score');
+  }
+
 }
+
+// NOTE not accessible to rest of application because it is not exported
+function whatUp() { }
