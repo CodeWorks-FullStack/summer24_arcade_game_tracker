@@ -48,4 +48,4 @@ export class GamersController {
 }
 
 // NOTE not accessible to rest of application because it is not exported
-function whatUp() { }
+// function whatUp() { }
