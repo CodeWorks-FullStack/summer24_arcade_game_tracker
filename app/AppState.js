@@ -17,6 +17,10 @@ class ObservableAppState extends EventEmitter {
       name: 'mick',
       score: 0
     },
+    {
+      name: 'jake',
+      score: 0
+    },
   ]
 }
 
