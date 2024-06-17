@@ -2,12 +2,13 @@ import { AppState } from "../AppState.js";
 
 // NOTE do not export class definition for services, so no one can create a new Service
 class GamersService {
-  increaseScore() {
-    console.log('Increasing score, but from the service');
+  increaseScore(gamerName) {
+    console.log('Increasing score, but from the service, and the name of the gamer is ' + gamerName);
     // NOTE You can access properties on the AppState by using dot notation 
     const gamers = AppState.gamers
-    gamers[0].score++
-    console.log('here are the gamer score', gamers[0].score);
+    const foundGamer = gamers.find((gamer) => gamer.name == gamerName)
+    foundGamer.score++
+    console.log(`${foundGamer.name}'s score is now ${foundGamer.score}`);
   }
 }
 

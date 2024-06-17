@@ -8,9 +8,9 @@ export class GamersController {
     console.log("Constructors are cool");
   }
 
-  increaseScore() {
-    console.log('Increasing score from the controller');
-    gamersService.increaseScore()
+  increaseScore(gamerName) {
+    console.log('Increasing score from the controller, and the gamer name is ' + gamerName);
+    gamersService.increaseScore(gamerName)
   }
 
 }
