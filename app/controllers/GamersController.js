@@ -24,10 +24,10 @@ export class GamersController {
     event.preventDefault()
     console.log('creating gamer!');
     const form = event.target
-    console.log('got the form', form);
+    console.log('got the HTML form', form);
     // @ts-ignore
     const nameFromForm = form.gamerName.value
-    console.log('name from form: ' + nameFromForm);
+    console.log('got the name from the HTML form: ' + nameFromForm);
 
     gamersService.createNewGamer(nameFromForm)
 
@@ -38,16 +38,7 @@ export class GamersController {
     const gamerCardsElement = document.getElementById('gamerCards')
     let innerHTMLString = ''
     const gamers = AppState.gamers
-    gamers.forEach((gamer) => innerHTMLString += `
-    <div class="col-12 col-md-4">
-      <div
-        class="d-flex gap-3 align-items-center justify-content-between border border-dark border-1 rounded mb-3 p-2">
-        <p class="mb-0 text-capitalize">${gamer.name}</p>
-        <p class="mb-0">Arcade Games Won: ${gamer.score}</p>
-        <button onclick="app.GamersController.increaseScore('${gamer.name}')" class="btn btn-outline-success">+</button>
-      </div>
-    </div>
-    `)
+    gamers.forEach((gamer) => innerHTMLString += gamer.gamerCardHTMLTemplate)
     gamerCardsElement.innerHTML = innerHTMLString
   }
 
